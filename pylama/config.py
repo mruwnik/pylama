@@ -218,6 +218,7 @@ def get_config(ini_path=None, rootdir=CURDIR):
             path = os.path.join(rootdir, path)
             if os.path.isfile(path) and os.access(path, os.R_OK):
                 config.read(path)
+                break
     else:
         config.read(ini_path)
 
